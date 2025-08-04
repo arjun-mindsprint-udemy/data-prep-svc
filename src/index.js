@@ -14,6 +14,10 @@ app.post('/', (req, res)=> {
     res.json({chunks});
 });
 
+app.get('/health', (req, res) => {
+    res.json({ status: "UP" });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 });
